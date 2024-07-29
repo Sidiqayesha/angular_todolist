@@ -1,0 +1,31 @@
+/* Optional custom styles */
+.mat-dialog-content {
+    background-color: #f0f0f0; /* Light gray background */
+  }
+  
+  .mat-dialog-actions {
+    background-color: #f0f0f0; /* Match content background */
+  }
+  
+  .btn-primary {
+    background-color: #17a2b8; /* Custom primary button color */
+    border-color: #17a2b8;
+    color: #fff; /* Text color */
+  }
+  
+  .btn-primary:hover {
+    background-color: #138496; /* Darker shade on hover */
+    border-color: #138496;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d; /* Bootstrap secondary button color */
+    border-color: #6c757d;
+    color: #fff; /* Text color */
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268; /* Darker shade on hover */
+    border-color: #5a6268;
+  }
+  

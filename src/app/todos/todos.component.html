@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Todo App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Hello,<b> {{ name }}</b>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#" (click)="logout()">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5 task-list-container">
+  <h2 class="text-center mb-4">My Todo List</h2>
+
+  <input class="form-control" type="text" placeholder="Search todos..." [(ngModel)]="searchText" (input)="filterTodos()" />
+
+  <div class="dashboard-layout text-center mt-4">
+    <button mat-raised-button class="btn-add-task" (click)="openAddTaskDialog()">Add Task</button>
+  </div><br>
+
+  <div *ngIf="noResultsFound" class="alert alert-warning mt-4 text-center" role="alert">
+    No tasks found matching your search criteria.
+  </div>
+
+  <div *ngFor="let todo of filteredTodos" class="card mb-3 task-card">
+    <div class="card-body">
+      <h5 class="card-title"><strong>Title:</strong> {{ todo.title }}</h5>
+      <p class="card-text"><strong>Description:</strong> {{ todo.description }}</p>
+      <button mat-raised-button class="btn-update" (click)="openUpdateTaskDialog(todo)">Update</button>
+      <button mat-raised-button class="btn-delete" (click)="deleteTask(todo.id)">Delete</button>
+    </div>
+  </div>
+</div>

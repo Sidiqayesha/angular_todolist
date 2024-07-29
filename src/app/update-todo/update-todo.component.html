@@ -1,0 +1,17 @@
+<h2 mat-dialog-title class="text-center mb-4">Update Task</h2>
+<mat-dialog-content>
+  <form>
+    <mat-form-field class="w-100">
+      <mat-label>Title</mat-label>
+      <input matInput [(ngModel)]="oldTask.title" name="title" required>
+    </mat-form-field>
+    <mat-form-field class="w-100">
+      <mat-label>Description</mat-label>
+      <textarea matInput [(ngModel)]="oldTask.description" name="description" rows="5" required></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions class="d-flex justify-content-center">
+  <button mat-button class="btn btn-secondary mr-2" (click)="onNoClick()">Cancel</button>
+  <button mat-button class="btn btn-primary" (click)="updateTask()" [disabled]="!oldTask.title || !oldTask.description">Update</button>
+</mat-dialog-actions>

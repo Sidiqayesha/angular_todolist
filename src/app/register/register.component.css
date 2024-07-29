@@ -1,0 +1,74 @@
+/* Center the register box */
+.register-container {
+    height: 100vh;
+    background: linear-gradient(to right, #fbf9fc, #2575fc);
+    color: #fff;
+  }
+  
+  /* Style the register box */
+  .register-box {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+  }
+  
+  /* Header style */
+  .register-box h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form group margin */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  /* Label style */
+  .form-label {
+    color: #333;
+  }
+  
+  /* Input field style */
+  .form-control {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  /* Button style */
+  .btn-primary {
+    background: #007bff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background: #0056b3;
+  }
+  
+  /* Alert style */
+  .alert {
+    margin-top: 15px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  
+  /* Link style */
+  .text-primary {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .text-primary:hover {
+    color: #0056b3;
+  }
+  
